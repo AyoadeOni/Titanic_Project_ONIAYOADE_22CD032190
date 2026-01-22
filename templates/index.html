@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titanic Survival Prediction</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+        }
+        .container {
+            width: 420px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 6px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+        }
+        button {
+            background: #003366;
+            color: white;
+            border: none;
+            font-size: 16px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .result {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Titanic Survival Prediction</h2>
+
+    <form method="POST">
+        <select name="Pclass" required>
+            <option value="">Passenger Class</option>
+            <option value="1">1st Class</option>
+            <option value="2">2nd Class</option>
+            <option value="3">3rd Class</option>
+        </select>
+
+        <select name="Sex" required>
+            <option value="">Sex</option>
+            <option value="1">Female</option>
+            <option value="0">Male</option>
+        </select>
+
+        <input type="number" step="any" name="Age" placeholder="Age" required>
+        <input type="number" step="any" name="Fare" placeholder="Fare" required>
+
+        <select name="Embarked" required>
+            <option value="">Embarked</option>
+            <option value="0">Southampton (S)</option>
+            <option value="1">Cherbourg (C)</option>
+            <option value="2">Queenstown (Q)</option>
+        </select>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            Prediction Result: {{ prediction }}
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
