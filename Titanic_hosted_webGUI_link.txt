@@ -2,5 +2,6 @@ Name: Ayoade Oni
 Matric Number: 22CD032190
 Machine Learning Algorithm Used: Logistic Regression
 Model Persistence Method: Joblib
-Live URL: https://your-deployed-link
-GitHub Repository: https://github.com/yourusername/Titanic_Project
+Live URL: https://titanic-project-oniayoade-22cd032190.onrender.com
+GitHub Repository:https://github.com/AyoadeOni/Titanic_Project_ONIAYOADE_22CD032190
+
